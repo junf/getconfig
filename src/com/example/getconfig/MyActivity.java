@@ -17,8 +17,6 @@ public class MyActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 		Configuration config = getResources().getConfiguration();
-//		TextView tv = (TextView)findViewById(R.id.text_config);
-//		tv.setText(config.toString());
 		displayConfig();
 	}
 
@@ -37,7 +35,7 @@ public class MyActivity extends Activity {
 				}
 			}
 		} catch (IllegalAccessException e) {
-			//この補足処理が正しいかどうかは不明
+			//I don' think if throwing this exception is appropriate.
 			throw new RuntimeException(e);
 		}
 		TextView tv = (TextView)findViewById(R.id.text_config);
